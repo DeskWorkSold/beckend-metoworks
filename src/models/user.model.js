@@ -49,6 +49,67 @@ const userSchema = mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    firstName: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    lastName: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    email: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    phoneNumber: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    foundedIn: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    whatsMakesUsSpecial: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    companyName: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    companyScope: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    salaryRange : {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    headquarters: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    companyLocation: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+    description: {
+      type: String,
+      required: false,
+      trim: true,
+    },
+
   },
   {
     timestamps: true,
