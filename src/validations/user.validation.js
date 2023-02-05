@@ -6,9 +6,25 @@ const createUser = {
     email: Joi.string().required().email(),
     password: Joi.string().required().custom(password),
     name: Joi.string().required(),
-    role: Joi.string().required().valid('user', 'admin'),
+    role: Joi.string().required().valid('freelancer', 'recuriter'),
   }),
 };
+
+const editPrifole = {
+  body : Joi.object().keys({
+    firstName :Joi.string(),
+    lastName :Joi.string(),
+    phoneNumber :Joi.string(),
+    foundedIn :Joi.string(),
+    whatsMakesUsSpecial :Joi.string(),
+    companyName :Joi.string(),
+    companyScope :Joi.string(),
+    salaryRange :Joi.string(),
+    headquarters :Joi.string(),
+    companyLocation :Joi.string(),
+    description :Joi.string(),
+  })
+}
 
 const getUsers = {
   query: Joi.object().keys({
@@ -51,4 +67,5 @@ module.exports = {
   getUser,
   updateUser,
   deleteUser,
+  editPrifole
 };
